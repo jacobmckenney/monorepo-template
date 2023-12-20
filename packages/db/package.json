@@ -1,0 +1,19 @@
+{
+    "name": "db",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "generate": "drizzle-kit generate:pg"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "drizzle-orm": "^0.29.1",
+        "postgres": "^3.4.3"
+    },
+    "devDependencies": {
+        "drizzle-kit": "^0.20.7"
+    }
+}
