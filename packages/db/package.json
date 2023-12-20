@@ -1,19 +1,27 @@
 {
-    "name": "db",
+    "name": "@abide/db",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "private": true,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "generate": "drizzle-kit generate:pg"
+        "dev": "postgres -D ~/.abide/db",
+        "generate": "drizzle-kit generate:pg",
+        "db:init": "initdb --locale=C -E UTF-8 -D ~/.abide/db -W",
+        "build": "tsup src/index.ts --format cjs --dts"
     },
     "keywords": [],
-    "author": "",
+    "author": "Jacob McKenney",
     "license": "ISC",
     "dependencies": {
         "drizzle-orm": "^0.29.1",
-        "postgres": "^3.4.3"
+        "pg": "^8.11.3"
     },
     "devDependencies": {
-        "drizzle-kit": "^0.20.7"
+        "@types/node": "^20",
+        "@types/pg": "^8.10.9",
+        "drizzle-kit": "^0.20.7",
+        "tsup": "^8.0.1",
+        "typescript": "^5"
     }
 }

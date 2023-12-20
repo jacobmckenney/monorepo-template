@@ -1,10 +1,12 @@
 {
-    "name": "abide",
+    "name": "@abide/monorepo",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "turbo build"
+        "dev": "turbo dev --parallel",
+        "build": "turbo build",
+        "db:init": "pnpm --filter @abide/db db:init"
     },
     "keywords": [],
     "author": "",

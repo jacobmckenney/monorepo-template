@@ -1,9 +1,13 @@
-import { drizzle } from "drizzle-orm/postgres-js";
-import { migrate } from "drizzle-orm/postgres-js/migrator";
-import postgres from "postgres";
+import { drizzle as drizzleInit } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
+import { user } from "./schema";
 
-const connectionString = "...";
-const sql = postgres(connectionString, { max: 1 });
-const db = drizzle(sql);
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    max: 2,
+});
+export const drizzle = drizzleInit(pool);
 
-await migrate(db, { migrationsFolder: "migrations" });
+export const Tables = {
+    User: user,
+};

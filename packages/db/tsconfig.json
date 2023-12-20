@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist"
+    },
+    "exclude": ["node_modules", "build", "dist", ".next"],
+    "include": ["src"]
+}

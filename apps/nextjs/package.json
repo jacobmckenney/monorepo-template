@@ -1,5 +1,5 @@
 {
-    "name": "nextjs",
+    "name": "@abide/nextjs",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@abide/shared": "workspace:*",
         "react": "^18",
         "react-dom": "^18",
         "next": "14.0.4"
