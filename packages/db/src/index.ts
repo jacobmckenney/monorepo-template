@@ -1,13 +1,14 @@
 import { drizzle as drizzleInit } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
-import { user } from "./schema";
+import { test, user } from "./schema";
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    max: 2,
+    max: 1,
 });
 export const drizzle = drizzleInit(pool);
 
-export const Tables = {
-    User: user,
+export const tables = {
+    test,
+    user,
 };

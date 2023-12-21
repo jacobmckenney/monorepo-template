@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "turbo dev --parallel",
         "build": "turbo build",
-        "db:init": "pnpm --filter @abide/db db:init"
+        "db:init": "pnpm --filter @abide/db db:init",
+        "db:generate": "pnpm --filter @abide/db db:generate",
+        "db:migrate": "pnpm --filter @abide/db db:migrate"
     },
     "keywords": [],
     "author": "",
