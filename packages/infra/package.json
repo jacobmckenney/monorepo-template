@@ -1,12 +1,12 @@
 {
-    "name": "@abide/infra",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "name": "project",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/aws": "^6.0.0",
+        "@pulumi/awsx": "^2.0.2"
+    }
 }
